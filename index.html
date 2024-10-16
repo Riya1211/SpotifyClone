@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="main">
+        <nav>
+            <i class="ri-spotify-fill"></i>
+            <div class="midNavContent">
+                <i class="ri-home-5-fill" id="homeButton"></i>
+                <div class="searchBar">
+                    <i class="ri-search-line"></i>
+                    <input type="text" placeholder="What do you want to play?">
+                    <i class="ri-folder-open-fill"></i>
+                </div>
+            </div>
+            <div class="rgtNavContent">
+                <div class="signUpBtn">
+                    <h4>Sign up</h4>
+                </div>
+                <div class="loginBtn">
+                    <h4>Log in</h4>
+                </div>
+            </div>
+        </nav>
+        <div class="mainContainer">
+            <div class="sideBar">
+                <div class="sideBarWrapper">
+                    <div class="sbcontainer1">
+                        <div class="sbLeft">
+                            <svg data-encore-id="icon" role="img" aria-hidden="true" viewBox="0 0 24 24" class="Svg-sc-ytk21e-0 bneLcE"><path d="M3 22a1 1 0 0 1-1-1V3a1 1 0 0 1 2 0v18a1 1 0 0 1-1 1zM15.5 2.134A1 1 0 0 0 14 3v18a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V6.464a1 1 0 0 0-.5-.866l-6-3.464zM9 2a1 1 0 0 0-1 1v18a1 1 0 1 0 2 0V3a1 1 0 0 0-1-1z"></path></svg>
+                            <h3>Your Library</h3>
+                        </div>
+                        <i class="ri-add-line"></i>
+                    </div>
+                    <div class="sbcontainer2">
+                        <div class="sbContainer2Wrapper">
+                            <div class="sbCard">
+                                <h3>Create your first playlist</h3>
+                                <p>It's easy, we'll help you</p>
+                                <div class="sbBtn">
+                                    <h4>Create playlist</h4>
+                                </div>
+                            </div>
+                            <div class="sbCard">
+                                <h3>Let's find some podcasts to follow</h3>
+                                <p>We'll keep on updated on new episodes</p>
+                                <div class="sbBtn">
+                                    <h4>Browse podcasts</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sbcontainer3">
+                        <div class="textWrapper">
+                            <span>Legal</span>
+                            <span>Saftey & Privacy Center</span>
+                            <span>Privacy Policy</span>
+                            <span>Cookies</span>
+                            <span>About Ads</span>
+                            <span>Accessibility</span>
+                        </div>
+                        <span style="color: white; font-size: 0.7rem; cursor: pointer;">Cookies</span>
+                        <div class="sbLastBtn" style="margin-bottom: 10px;">
+                            <i class="ri-global-line"></i>
+                            <h4>English</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="content">
+                <!-- in the beginning width was 85% and outside content -->
+                <iframe id="contentFrame" style="width: 100%; height: 100%; border: none; overflow: hidden; border-radius: 8px;"></iframe>
+            </div>
+        </div>
+        <div class="signupBox">
+            <div class="lftText">
+                <h3>Preview of Spotify</h3>
+                <p>Sign up to get unlimited songs and podcasts with occasional ads. No credit card needed.</p>
+            </div>
+            <div class="loginBtn">
+                <h4>Sign up Free</h4>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+<!-- document.querySelectorAll('.Box__BoxComponent-sc-y4nds-0').forEach((div) => {
+    div.querySelectorAll('img').forEach((img) => {
+        console.log(img.src); // Log the source of each image
+    });
+}); -->

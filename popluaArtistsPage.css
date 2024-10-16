@@ -1,0 +1,293 @@
+:root{
+    --main-page-color: #000;
+    --container-color: #121212;
+    --card-hover-color: #1f1f1f;
+    --search-hover-color: #2a2a2a;
+    --main-text-color: #fff;
+    --secondary-text-color: #b6b6b6;
+    --play-btn-color: #1ed760;
+    --play-btn-hover-color: #3be477;
+    --social-media-color: #292929;
+    --social-media-hover-color: #727272;
+}
+@font-face{
+    src: url('./fonts/SpotifyMixUI-Bold-4264b799009b1db5c491778b1bc8e5b7.woff2') format('woff2');
+    font-family: 'SpotifyMixUIBold';
+}
+@font-face{
+    src: url('./fonts/SpotifyMixUI-Regular-cc3b1de388efa4cbca6c75cebc24585e.woff2') format('woff2');
+    font-family: 'SpotifyMixUIRegular';
+}
+@font-face{
+    src: url('./fonts/SpotifyMixUITitleVariable-8769ccfde3379b7ebcadd9529b49d0cc.woff2') format('woff2');
+    font-family: 'SpotifyMixUITitle';
+}
+@font-face{
+    src: url('./fonts/SpotifyMixUITitle-Bold-37290f1de77f297fcc26d71e9afcf43f.woff2') format('woff2');
+    font-family: 'SpotifyMixUITitleBold';
+}
+@font-face{
+    src: url('./fonts/SpotifyMixUITitle-Extrabold-ba6c73cd7f82c81e49cf2204017803ed.woff2') format('woff2');
+    font-family: 'SpotifyMixUITitleExtraBold';
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: var(--main-text-color);
+    font-family: 'SpotifyMixUIRegular', serif;
+}
+html, body{
+    width: 100%;
+    height: 100%;
+}
+
+.mainContent{
+    background: linear-gradient(to bottom, #222222 0%,#121212 40%);
+    /* width: 85%; */
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    overflow: hidden;
+}
+.mainContent:hover{
+    overflow-y: scroll;
+}
+.mainContentWrapper{
+    width: 100%;
+    /* height: 332vh; */
+    /* height: 350vh; */
+    height: fit-content;
+    padding: 30px 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    /* background-color: lightsalmon; */
+}
+.mainrow{
+    width: 100%;
+    height: 100%;
+    /* background-color: lightcoral; */
+    display: flex;
+    flex-direction: column;
+}
+.textLine{
+    display: flex;
+    justify-content: space-between;
+}
+.textLine h3{
+    font-family: 'SpotifyMixUITitleBold';
+    font-size: 1.6rem;
+    cursor: pointer;
+}
+.textLine h3:hover{
+    text-decoration: underline;
+}
+.cards{
+    width: 100%;
+    height: fit-content;
+    margin-top: 12px;
+    /* background-color: rgb(49, 153, 153); */
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.card{
+    /* flex: 1 0 15%; Default width for 5 cards */
+    flex: 1 0 18%;
+    /* width: 18.3%; */
+    /* width: 181.2px; */
+    height: 43vh;
+    /* height: 224px; */
+    position: relative;
+    /* background-color: rgb(49, 153, 153); */
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color ease-in-out 0.15s, width 0.3s;
+}
+.playIcon{
+    position: absolute;
+    right: 0;
+    bottom: 40%;
+    /* padding: 13px 14.5px; */
+    padding: 14px;
+    border-radius: 50%;
+    background-color: var(--play-btn-color);
+    visibility: hidden;
+    transition: visibility ease-in-out 0.15s;
+} 
+.playIcon i{
+    color: #000;
+    font-size: 1.4rem;
+}
+.playIcon:hover{
+    background-color: var(--play-btn-hover-color);
+}
+.card:hover{
+    background-color: var(--card-hover-color);
+}
+.card:hover .playIcon{
+    visibility: visible;
+}
+.artistImg{
+    /* width: 160px; */
+    width: 100%;
+    height: 80%;
+    /* height: 160px; */
+    border-radius: 50%;
+    box-shadow:1px 1px 10px 0px black;
+    overflow: hidden;
+}
+.cardImg{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+}
+.card h4{
+    margin: 8px 0px;
+    font-weight: 500;
+    cursor: pointer;
+    /* width: 85%; */
+}
+.card h4:hover{
+    text-decoration: underline;
+}
+.card p{
+    font-size: small;
+    color: var(--secondary-text-color);
+}
+/* Footer */
+.footerDiv{
+    margin-top: 20px;
+    width: 100%;
+    height: 65vh;
+    display: flex;
+    flex-direction: column;
+    /* background-color: rgb(247, 161, 32); */
+}
+.fd1{
+    width: 100%;
+    height: 65%;
+    display: flex;
+    padding: 20px;
+    border-bottom: 1px solid var(--card-hover-color);
+}
+.col{
+    /* width: 25%;
+    height: 100%; */
+    flex: 1 1 23%;
+    min-width: 149px;
+    height: fit-content;
+}
+.col h3{
+    font-family: 'SpotifyMixUIBold';
+    font-size: 1rem;
+    cursor: pointer;
+}
+.col p{
+    margin: 5px 0px;
+    cursor: pointer;
+}
+.col p:hover{
+    text-decoration: underline;
+}
+.socialMediaIcons{
+    /* width: 19.2%;
+    height: 100%; */
+    flex: 1 1 25%; /* Allow growth and shrink with a base width */
+    min-width: 150px; 
+}
+.socialMediaIcons i{
+    padding: 10px;
+    font-size: 1.2rem;
+    background-color: var(--social-media-color);
+    border-radius: 50%;
+    margin-right: 8px;
+    cursor: pointer;
+}
+.socialMediaIcons i:hover{
+    background-color: var(--social-media-hover-color);
+}
+.fd2 p{
+    margin-top: 35px;
+    font-size: small;
+    color: var(--secondary-text-color);
+}
+@media (max-width: 961px) {
+    .card {
+        flex: 1 0 17%; /*show 5 cards */
+    }
+    .artistImg{
+        height: 74%;
+    }
+}
+
+@media (max-width: 807px) {
+    .card {
+        flex: 1 0 22.4%; /*show 4 cards */
+        height: 29vw;
+    }
+    .artistImg{
+        height: 75%;
+    }
+}
+
+@media (max-width: 648px) {
+    .card {
+        flex: 1 0 30%; /*show 3 cards */
+        height: 38vw;
+    }
+    .artistImg{
+        height: 78%;
+    }
+
+}
+@media (max-width: 488px) {
+    .card {
+        flex: 1 0 45%; /*show 2 cards */
+        height: 57vw;
+    }
+    .artistImg{
+        height: 79%;
+    }
+}
+
+@media (max-width: 739px){
+    .footerDiv{
+        width: 100%;
+        height: 60vh;
+    }
+    .fd1{
+        width: 100%;
+        /* height: 80%; */
+        height: fit-content;
+        padding: 5px;
+        flex-wrap: wrap;
+        flex-shrink: 1;
+    }
+    .col{
+        margin-top: 8px;
+    }
+    .socialMediaIcons{
+        margin-top: 8px;
+        margin-bottom: 10px;
+        width: 25%;
+    }
+    .fd2 p{
+        margin: 15px 0px;
+        font-size: small;
+        color: var(--secondary-text-color);
+    }
+}
+
+/* To fix the content Size */
+@media (max-width: 419px) {
+    .mainContent{
+        width: 419px;
+    }
+
+}

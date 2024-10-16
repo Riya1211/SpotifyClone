@@ -1,0 +1,364 @@
+:root{
+    --main-page-color: #000;
+    --container-color: #121212;
+    --card-hover-color: #1f1f1f;
+    --search-hover-color: #2a2a2a;
+    --main-text-color: #fff;
+    --secondary-text-color: #b6b6b6;
+    --play-btn-color: #1ed760;
+    --play-btn-hover-color: #3be477;
+    --social-media-color: #292929;
+    --social-media-hover-color: #727272;
+}
+@font-face{
+    src: url('./fonts/SpotifyMixUI-Bold-4264b799009b1db5c491778b1bc8e5b7.woff2') format('woff2');
+    font-family: 'SpotifyMixUIBold';
+}
+@font-face{
+    src: url('./fonts/SpotifyMixUI-Regular-cc3b1de388efa4cbca6c75cebc24585e.woff2') format('woff2');
+    font-family: 'SpotifyMixUIRegular';
+}
+@font-face{
+    src: url('./fonts/SpotifyMixUITitleVariable-8769ccfde3379b7ebcadd9529b49d0cc.woff2') format('woff2');
+    font-family: 'SpotifyMixUITitle';
+}
+@font-face{
+    src: url('./fonts/SpotifyMixUITitle-Bold-37290f1de77f297fcc26d71e9afcf43f.woff2') format('woff2');
+    font-family: 'SpotifyMixUITitleBold';
+}
+@font-face{
+    src: url('./fonts/SpotifyMixUITitle-Extrabold-ba6c73cd7f82c81e49cf2204017803ed.woff2') format('woff2');
+    font-family: 'SpotifyMixUITitleExtraBold';
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: var(--main-text-color);
+    font-family: 'SpotifyMixUIRegular', serif;
+}
+html, body{
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--main-page-color);
+}
+.main{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    overflow-x: hidden;
+}
+/* NavBar */
+nav{
+    width: 100%;
+    height: 9vh;
+    min-height: 57px;
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 5px 5px 25px;
+}
+nav>i{
+    font-size: 2.4rem;
+}
+.midNavContent{
+    /* width: 40%; */
+    width: 530.39px;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 10%;
+}
+.midNavContent i{
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+.ri-home-5-fill{
+    padding: 10px 11px;
+    background-color: var(--card-hover-color);
+    border-radius: 50%;
+    transition: scale 0.15s ease-in-out;
+}
+.ri-home-5-fill:hover{
+    scale: 1.1;
+}
+.searchBar{
+    width: 90%;
+    height: 100%;
+    background-color: var(--card-hover-color);
+    padding: 7px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in ;
+}
+.searchBar:hover{
+    background-color: var(--search-hover-color);
+    outline: 0.5px solid var(--card-hover-color);
+}
+.searchBar:hover .ri-search-line{
+    color: #fff;
+}
+.searchBar i{
+    color: var(--secondary-text-color);
+}
+.searchBar input{
+    width: 85%;
+    height: 70%;
+    border-style: none;
+    outline: none;
+    font-size: 1rem;
+    font-weight: 400;
+    background-color: transparent;
+    border-right: 1px solid var(--secondary-text-color);
+    margin-right: 5px;
+    cursor: pointer;
+}
+.searchBar input::placeholder{
+    color: var(--secondary-text-color);
+}
+.rgtNavContent{
+    /* width: 16%; */
+    width: fit-content;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.signUpBtn{
+    padding: 10px;
+    cursor: pointer;
+} 
+.signUpBtn h4{
+    font-family: 'SpotifyMixUIBold';
+    color: var(--secondary-text-color);
+    font-weight: 600;
+    white-space: nowrap;
+}
+.signUpBtn:hover h4{
+    scale: 1.1;
+    color: #fff;
+}
+.loginBtn{
+    padding: 12px 30px;
+    background-color: #fff;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: scale 0.15s ease-in-out;
+} 
+.loginBtn h4{
+    font-family: 'SpotifyMixUIBold';
+    color: #000;
+    font-weight: 600;
+    white-space: nowrap;
+}
+.loginBtn:hover{
+    scale: 1.1;
+}
+/* NAVBAR ENDS */
+.mainContainer{
+    width: 100%;
+    height: 81vh;
+    min-height: 550px;
+    display: flex;
+    padding: 5px;
+    gap: 8px;
+}
+/* Side Bar */
+.sideBar{
+    background-color: var(--container-color);
+    width: 320px;
+    flex-shrink: 0;
+    /* width: 25%; */
+    height: 100%;
+    border-radius: 8px;
+}
+.sideBarWrapper{
+    width: 100%;
+    height: 100%;
+    padding: 5px;
+}
+.sbcontainer1{
+    width: 100%;
+    height: 15%;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+}
+.sbLeft{
+    display: flex;
+    gap: 8px;
+}
+.bneLcE{
+    fill: var(--secondary-text-color);
+    width: 24px;
+    height: 24px;
+}
+.sbLeft h3{
+    font-family: 'SpotifyMixUIBold';
+    color: var(--secondary-text-color);
+    font-size: 1rem;
+}
+.sbcontainer1 i{
+    font-size: 1.35rem;
+    color: var(--secondary-text-color);
+}
+.sbcontainer2{
+    width: 100%;
+    height: 45%;
+    padding: 5px;
+    overflow: hidden;
+    transition: ease-in 0.5s;
+}
+.sbcontainer2:hover{
+    overflow-y: scroll;
+}
+.sbContainer2Wrapper{
+    width: 100%;
+    height: 45vh;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.sbCard{
+    width: 100%;
+    /* height: 47%; */
+    background-color: var(--card-hover-color);
+    padding: 10px 17px;
+    border-radius: 8px;
+}
+.sbCard h3{
+    font-family: 'SpotifyMixUIBold';
+    font-size: 0.9rem;
+    margin: 5px 0px;
+}
+.sbCard p{
+    width: 70%;
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+.sbBtn{
+    margin-top: 25px;
+    width: fit-content;
+    /* height: 30%; */
+    padding: 6px 17px;
+    border-radius: 25px;
+    background-color: #fff;
+    cursor: pointer;
+    transition: scale 0.15s ease-in-out;
+}
+.sbBtn:hover {
+    scale: 1.1;
+}
+.sbBtn h4{
+    font-family: 'SpotifyMixUIBold';
+    text-align: center;
+    color: var(--container-color);
+    font-size: 0.9rem;
+}
+.sbcontainer3{
+    width: 100%;
+    height: 40%;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.textWrapper{
+    width: 90%;
+    height: 35%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+.textWrapper>span{
+    font-size: 0.7rem;
+    color: var(--secondary-text-color);
+    cursor: pointer;
+}
+.sbcontainer3>span:hover{
+    text-decoration: underline;
+}
+.sbLastBtn{
+    margin-top: 25px;
+    width: fit-content;
+    /* height: 30%; */
+    padding: 6px 15px;
+    border-radius: 25px;
+    border: 1px solid var(--secondary-text-color);
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+    transition: scale 0.15s ease-in-out;
+}
+.sbLastBtn>i{
+    font-size: 1.1rem;
+}
+.sbLastBtn h4{
+    font-family: 'SpotifyMixUIBold';
+    text-align: center;
+    color: var(--main-text-color);
+    font-size: 0.9rem;
+}
+.sbLastBtn:hover {
+    scale: 1.1;
+}
+/* Sidebar End */
+.content{
+    flex-grow: 1;
+}
+.signupBox{
+    margin-left: 5px;
+    margin-right: 5px;
+    width: 99%;
+    height: 10vh;
+    min-height: 60px;
+    background-color: #00DBDE;
+    background-image: linear-gradient(270deg, #00DBDE 0%, #FC00FF 99%);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 24px;
+}
+.lftText h3{
+    font-family: 'SpotifyMixUIBold';
+    font-size: 0.9rem;
+}
+
+@media (max-width:887px){
+    nav{
+        /* height: 140px; */
+        height: 7vh;
+        padding: 5px;
+    }
+    .midNavContent{
+        /* width: 40%; */
+        width: 530.39px;
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-left: 10%;
+    }
+    .midNavContent i{
+        margin-right: 5px;
+    }
+
+    .rgtNavContent{
+        gap: 5px;
+    }
+}
+
+@media (max-width:760px){
+    .main{
+        width: 760px;
+    }
+    .signupBox{
+        padding: 5px;
+    }
+}
